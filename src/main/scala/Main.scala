@@ -16,6 +16,6 @@ class ClusterListener extends Actor with ActorLogging {
 
   def receive = {
     case MemberUp(member) => log.info("memberUp={}", member.address)
-    case event ⇒ log.debug("event={}", event.toString)
+    case event => log.debug("event={}", event.toString)
   }
 }
