@@ -1,9 +1,9 @@
 
 seed:
-  image: "docker-compose-akka:0.1-SNAPSHOT"
+  image: "docker-compose-akka-cluster:0.1-SNAPSHOT"
   hostname: "akkaseed"
   command: "-Dakka.remote.netty.tcp.hostname=akkaseed"
 
 node:
-  image: "docker-compose-akka:0.1-SNAPSHOT"
+  image: "docker-compose-akka-cluster:0.1-SNAPSHOT"
   links: ["seed:akkaseed"]
